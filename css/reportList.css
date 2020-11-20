@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+/*---Reset---*/
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em{font-style: normal}
+input{line-height:auto;vertical-align:middle;}
+strong.more{color:#c30}
+a{text-decoration: none;}
+
+html {
+}
+
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
+/*クラス定義*/
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.clearfix {
+	display: inline-table;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix{height: 1%;}
+*+html .clearfix{min-height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*--- ページ基本デザイン ---*/
+body {
+	/* width: 900px; */
+	margin: 0 auto;
+	background-color: rgb(139, 193, 242);
+}
+h1 {
+	width: 500px;
+	font-size: 40px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 5px;/*文字周りの余白*/
+  color: #010101;/*文字色*/
+  background: #eaf3ff;/*背景色*/
+  border-bottom: solid 3px #516ab6;/*下線*/
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+#header {
+	padding: 40px 10px 60px 10px;
+}
+#form {
+	width: 1450px;
+}
+#form form {
+	padding-left: 850px;
+}
+
+#wrapper {
+	width: 1450px;
+  margin: 10px auto 60px auto;
+	position: relative;/*footerを下部に配置*/
+	display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+#footer {
+	width: 100%;
+	border-top: solid 3px #516ab6;
+	padding: 5px;/*文字周りの余白*/
+	color: #010101;/*文字色*/
+	background: #eaf3ff;/*背景色*/
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+}
+table #serch {
+
+}
+table {
+	width: 900px;
+  margin: 0 auto;
+	background: #FFFFFF;
+}
+table tr:nth-child(odd) td {
+	background: rgb(226, 217, 217);
+}
+table th {
+  padding-left: 20px;
+	border: 1px solid black;
+	background: rgb(141, 177, 231);
+}
+table td {
+  padding-left: 20px;
+	border: 1px solid rgb(141, 177, 231);
+}
+.line {
+	padding: 150px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* {} */
