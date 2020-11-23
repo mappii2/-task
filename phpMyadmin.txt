@@ -1,0 +1,185 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.3
+-- https://www.phpmyadmin.net/
+--
+-- ホスト: localhost:8889
+-- 生成日時: 2020 年 11 月 23 日 10:51
+-- サーバのバージョン： 5.7.26
+-- PHP のバージョン: 7.4.2
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- データベース: `sample_php`
+--
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `jobs`
+--
+
+CREATE TABLE `jobs` (
+  `id` int(11) NOT NULL,
+  `username` int(11) NOT NULL,
+  `work` text NOT NULL,
+  `comment` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- テーブルのデータのダンプ `jobs`
+--
+
+INSERT INTO `jobs` (`id`, `username`, `work`, `comment`) VALUES
+(105, 94, '表示できたら', '成功です！'),
+(106, 1, '', ''),
+(107, 1, '', ''),
+(108, 1, '', ''),
+(109, 1, '', ''),
+(110, 1, '', ''),
+(111, 1, '', ''),
+(112, 1, '', ''),
+(113, 1, '', ''),
+(114, 1, '', ''),
+(115, 1, '', ''),
+(116, 1, '', ''),
+(117, 1, '', ''),
+(118, 1, '', ''),
+(119, 1, '', ''),
+(120, 1, '', ''),
+(121, 1, '', ''),
+(122, 1, '', ''),
+(123, 1, '', ''),
+(124, 1, '', ''),
+(125, 1, '', ''),
+(126, 1, '', ''),
+(127, 1, '', ''),
+(128, 1, '', ''),
+(129, 1, '', ''),
+(130, 1, '', ''),
+(131, 1, '', ''),
+(132, 94, '更新', 'しました。'),
+(133, 94, 'assari', 'shokora'),
+(134, 1, '', ''),
+(135, 1, '', ''),
+(136, 1, '', ''),
+(137, 94, 'kakuninn', 'test'),
+(138, 94, 'kakuninn', 'test'),
+(139, 1, 'df', 'dっfd');
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `report`
+--
+
+CREATE TABLE `report` (
+  `id` int(11) NOT NULL,
+  `emp_id` int(11) NOT NULL,
+  `day` date NOT NULL,
+  `business` text NOT NULL,
+  `comment` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- テーブルのデータのダンプ `report`
+--
+
+INSERT INTO `report` (`id`, `emp_id`, `day`, `business`, `comment`) VALUES
+(1, 0, '2020-10-05', '本日の業務は、\r\nーーーーー100％\r\nーーー作業50％\r\n', '次回までにーーーーの構想を練る\r\n\r\n〇〇さんに引継ぎます。宜しくお願いします。'),
+(2, 0, '2020-10-05', 'afsdfasdf', 'adfsadfdsafd'),
+(3, 0, '2020-10-05', 'お疲れ様です', '特になし'),
+(4, 55, '2020-10-05', 'テストです', 'お疲れ様でした'),
+(5, 12, '2020-10-06', '今日も一日お疲れ様でした。\r\n機能をたくさんつけたので、チェックお願いします！', '次回までに〇〇機能を搭載させ、完成に近づけます！\r\n'),
+(6, 21, '2020-10-14', '本日はログイン機能を完成させました。\r\n次回以降他の機能を追加いたします。', '思ったより時間がかかったため、時間を意識して動きたい。\r\n\r\n明日13時よりミーティングのため\r\n退出いたします。'),
+(7, 1, '2020-10-20', 'お疲れ様でした', 'お疲れ様でした'),
+(8, 1, '2020-11-08', '業務報告', '反省、伝えたいこと');
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(32) NOT NULL,
+  `huri` varchar(32) NOT NULL,
+  `tel` varchar(30) NOT NULL,
+  `mail` varchar(128) NOT NULL,
+  `password` varchar(128) NOT NULL,
+  `role` varchar(11) NOT NULL COMMENT '0:一般ユーザ　1:管理者'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- テーブルのデータのダンプ `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `huri`, `tel`, `mail`, `password`, `role`) VALUES
+(1, '増川龍平', 'マスカワリュウヘイ', '09055443322', 'mappiinex210@gmail.com', '$2y$10$SHvjTpWcogCt63DwDg6X9.NYQ2/4Qhi1mcirpZMmdcDoYcRJBSzwG', '管理者'),
+(2, '田中次郎', 'タナカジロウ', '08022334455', 'testuser001@gmail.com', 'pass', '従業員'),
+(3, '高橋次郎', 'タカハシジロウ', '09033442244', 'testuser002@gmaii.com', 'testpass2', '従業員'),
+(86, '増川龍平', 'マスカワリュウヘイ', '08023230202', 'mappiinex210@gmail.com', 'testpass2', '従業員'),
+(87, '増川吾郎', 'マスカワゴロウ', '09033442233', 'goro@mail.com', 'pass', '従業員'),
+(88, '増川龍平', 'マスカワリュウヘイ', '08023230202', 'hostuser01@gmail.com', 'Mappiinex210', '管理者'),
+(89, '増川龍平', 'マスカワリュウヘイ', '08023230202', 'mappii@gmail.com', '$2y$10$Nat5OjXEZMuNQqCwZxXeq.2iW.ob4H8dG2X9Zan2iu5YPJNukErai', '管理者'),
+(90, '田中　太郎', 'タナカ　タロウ', '08023230202', 'taro@mail.com', '$2y$10$6KC9c7xd4mCgxUPXBC6EduKe4VTQY6zh/qqtHFo8HDDEF.toaIntm', '従業員'),
+(91, '増川龍平', 'マスカワリュウヘイ', '08023230202', 'hdfgaom@gmail.com', 'pass111', '従業員'),
+(92, '佐藤玉緒', 'サトウタマオ', '09033445555', 'tamao@mail.com', '$2y$10$KHLnemCwpMB9GwOzg/sih.QRX4h4v39N2.FZyRQVOKus/rPgsRu/q', '管理者'),
+(93, '管理者ユーザ', 'カンリシャユーザ', '00011112222', 'admin@mail.com', '$2y$10$DHcjYkUWkj46e4gjKzny0O4b6xjZe3A.LA5TD3sv4toOSOZdd8nI6', '管理者'),
+(94, '従業員ユーザ', 'ジュウギョウインユーザ', '11122223333', 'emp@mail.com', '$2y$10$PfhzH7XNXuBq.TckNmjDZuMSMtaNAL7ANKsdL30sAzrDOcwcdQvXa', '従業員'),
+(95, '渡辺陽一', 'ワタナベヨウイチ', '09033434455', 'youichi@000', '$2y$10$SHvjTpWcogCt63DwDg6X9.NYQ2/4Qhi1mcirpZMmdcDoYcRJBSzwG', '従業員'),
+(96, '増川龍平', 'マスカワリュウヘイ', '8055209351', 'mappiinex210@gmail.com', '$2y$10$W3V734AHbeSwIfchE3b8DuZu9iIJWzCc6mlS0OAc5E1ApIYb0tIaW', '管理者'),
+(97, '田中　太郎', 'マスカワリュウヘイ', '08023230202', 'admin@mail.com', '$2y$10$Mw1/PlD/yv/hJ1NBPHACkOjdrjOk6fVU4hRXr1dRNefERQJ.J8ime', '管理者'),
+(98, '田中　太郎', 'マスカワリュウヘイ', '08023230202', 'admin@mail.com', '$2y$10$cFkTpCVQ8mRIAkF8AKB3fOKiE5UnAxZnbKv0D3vDZ1T1cNwovsd/O', '管理者'),
+(99, '田中　太郎', 'マスカワリュウヘイ', '08023230202', 'admin@mail.com', '$2y$10$9iaSGMsEewEug/JPlX0ZROUqp1/LWsovipSwCLurWoTtH79uCShry', '管理者'),
+(100, 'テスト太郎', 'テストタロウ', '09000001111', 'test@mail.com', '$2y$10$3Lvd7k956ob9yYetsezxwOhHQGRxDA2xA3/FSxznWyfzwd9CqjSZq', '従業員'),
+(101, 'テスト太郎', 'テストタロウ', '09000001111', 'test@mail.com', '$2y$10$gixZjFWncVd9wkZMBFeInuGLYiw9i7I4OhUg.3aQBFNwWjFEVQAxm', '従業員'),
+(102, 'テスト太郎', 'テストタロウ', '09000001111', 'test@mail.com', '$2y$10$HjfD2fxeFzxJIXZV9dz6D.jzco/tZxiB8uKtt1O5rXTvBat9OuEB2', '従業員'),
+(103, 'テスト太郎', 'テストタロウ', '09000001111', 'test@mail.com', '$2y$10$/kWWHFiHkX01DaCX.aPq8uF.mzhE.NholzDj/9oTnXejiQPzesUHC', '従業員'),
+(104, 'テスト太郎', 'テストタロウ', '09000001111', 'test@mail.com', '$2y$10$RcTkjhFZzRWLeLyd7eUaIuYyGORkQmDhb5pJUursS.GylH3vGWq1a', '従業員');
+
+--
+-- ダンプしたテーブルのインデックス
+--
+
+--
+-- テーブルのインデックス `jobs`
+--
+ALTER TABLE `jobs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- テーブルのインデックス `report`
+--
+ALTER TABLE `report`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- テーブルのインデックス `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- ダンプしたテーブルのAUTO_INCREMENT
+--
+
+--
+-- テーブルのAUTO_INCREMENT `jobs`
+--
+ALTER TABLE `jobs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
+
+--
+-- テーブルのAUTO_INCREMENT `report`
+--
+ALTER TABLE `report`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- テーブルのAUTO_INCREMENT `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
