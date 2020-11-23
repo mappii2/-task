@@ -25,6 +25,10 @@
 - PHP 7.3.11
 - phpMyAdmin
 
+## データベース
+
+私のデータベースは「phpmMyadmin.txt」をインポートして使ってください。
+
 ## 文責
 
 * 作成者　masukawa
